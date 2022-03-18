@@ -6,7 +6,7 @@
             <p> Email: <%= @student.email %></p>
             <p>Course Enrollments: 
             <% if @student.courses.empty? %>
-            None
+                    None 
             <% else %> 
             <ul>
             <% @student.courses.each do |course| %>

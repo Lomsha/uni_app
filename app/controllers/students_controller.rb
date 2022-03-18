@@ -14,11 +14,12 @@ class StudentsController < ApplicationController
     def new 
         @student = Student.new
     end 
+
     def create
-    @student =Student.new(student_params)
-    if @student.save
-         flash[:notice] = "You have successfully signed up"
-         redirect_to @student
+        @student =Student.new(student_params)
+      if @student.save
+          flash[:notice] = "You have successfully signed up"
+          redirect_to @student
     else
         render 'new'
      end
