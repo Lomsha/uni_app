@@ -1,8 +1,10 @@
+# require_dependency "application_controller"
+# module StudentCoursesController
+
 class StudentCoursesController < ApplicationContoller
 
  def create 
-      
-
+    byebug 
       course_to_add = Course.find(params[:course_id])
     unless current_user.courses.include?(course_to_add)
       StudentCourse.create(course: course_to_add, student: current_user)
@@ -13,4 +15,4 @@ class StudentCoursesController < ApplicationContoller
         redirect_to root_path
    end
  end
-end
+end 
